@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shikha.com</title>
+    <link rel="icon" type="image/png" href="S.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Shikha.com</div>
+        
+            <ul class="nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact_us</a></li>
+                <li class="toggle_icon"><i class="bx bx-menu" onclick="changeIcon()" id="icon"></i>
+                </li>   
+            </ul>
+           
+        
+        <div id="sidebar" style="display: none;">
+            <ul  id="sidebar">
+                <li onclick="changeIcon()"><a href="#home">Home</a></li>
+                <li onclick="changeIcon()"><a href="#about">About</a></li>
+                <li onclick="changeIcon()"><a href="#services">Services</a></li>
+                <li onclick="changeIcon()"><a href="#portfolio">Portfolio</a></li>
+                <li onclick="changeIcon()"><a href="#contact">Contact_us</a></li>
+            </ul>
+        </div>    
+    </header>
+
+<section class="home" id="home">
+    <div class="home-content">
+        <h3>Hello, It's Me</h3>
+        <h1>Shikha Kumari</h1>
+        <div class="animated-text">
+            <h3> <span class="text first-text">And I'm a </span>
+                <span class="text sec-text">Developer</span></h3>
+        </div>
+        <p>
+            Creative, passionate, and adventurous girl with a zest for life seeking new opportunities and connections.</p>
+
+        <div class="social_media">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-twitter' ></i></a>
+            <a href="#"><i class='bx bxl-instagram' ></i></a>
+            <a href="#"><i class='bx bxl-linkedin' ></i></a>
+
+        </div>
+
+        <div class="cv">
+            
+        <button id="downloadButton" placeholder="Download CV" class="btn">Download File</button>
+
+        </div>
+    </div>
+    <div class="home-img">
+        <img src="photo.jpg" alt="">
+    </div>
+</section>
+
+<section class="about" id="about">
+        <div class="about-image">
+            <img src="photo2.jpeg" alt="">
+    </div>
+
+    <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>Frontend Developer</h3>
+        <p> "Hi there! I'm Shikha Kumari, a BBA student with a passion for business and innovation."
+            Currently, I'm studying for my Bachelor's in Business Administration, delving into the world of management, finance, and entrepreneurship.
+            "When I'm not hitting the books, you'll find me exploring new business strategies, attending workshops, and staying updated on industry trends."
+            "I'm driven to make a positive impact in the business world, whether through launching my own venture or contributing innovative ideas to existing companies."
+            "Feel free to browse my website to learn more about my journey, projects, and insights. Let's connect and discuss all things business!".</p>
+            <input type="button" value="Read More" class="btn">
+    </div>
+</section>
+ 
+<section class="services" id="services">
+    <h2 class="heading">Our <span>Services</span></h2>
+    <div class="services-container">
+        <div class="services-box">
+            <i class='bx bx-code-alt'></i>
+            <h3>Web Development</h3>
+            <p>"Expert web development services encompassing responsive design,
+                 robust functionality, seamless integration, and scalable architecture for
+                  optimal online presence and performance."
+            </p>
+                 <input type="button" value="Read More" class="btn">
+                
+        </div>
+
+        <div class="services-box">
+            <i class='bx bxs-paint'></i>
+            <h3> Grapics Design</h3>
+            <p>"Our graphic design services offer visually stunning and cohesive branding 
+                solutions, including logo design,
+                 illustrations, and creative assets tailored to your brand identity......"</p>
+                <input type="button" value="Read More" class="btn">
+        </div>
+
+        <div class="services-box">
+            <i class='bx bx-bar-chart-alt' id="menu"></i>
+            <h3>Digital Marketing</h3>
+            <p>"Elevate your online presence with our comprehensive digital marketing 
+                services, including SEO, PPC, social media management, content creation, 
+                and analytics-driven strategies for growth."
+            </p>
+                 <input type="button" value="Read More" class="btn">
+                
+        </div>
+    </div>
+
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact <span>Me!</span></h2>
+    
+    <form action="#" onsubmit=" return sender()">
+        <div class="input-box">
+            <input type="text" placeholder="Full Name"  name="name" id="name">
+            <input type="email" placeholder="Email Address" name="email" id="email">
+        </div>
+
+        <div class="input-box">
+            <input type="number" placeholder="Mobile Number" name="contact_no" id="contact_no">
+            <input type="text" placeholder="Email Subject" name="subject" id="subject">
+        </div>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <br><input type="submit" value="Send Message" class="btn" id="btn" onclick="sendEmail()">
+
+    </form>
+
+</section>
+
+<footer class="footer">
+    <div class="footer-text">
+         <p>Copyright &copy; 2024  by Abhishek | All Rights Reserved. Email-abhishekbairwa728@gmail.com contact-no:9667609257</p>
+    </div>
+</footer>
+
+<script>
+    const text = document.querySelector(".sec-text");
+    
+    const textload = () =>{
+        
+        setTimeout(() =>{
+            text.textContent = "Developer";
+        }, 0);
+
+        setTimeout(() =>{
+            text.textContent = "Freelancer";
+        }, 4000);
+    
+        setTimeout(() =>{
+            text.textContent = "Blogger";
+        }, 8000);
+
+        setTimeout(() =>{
+            text.textContent = "Youtuber";
+        }, 12000);
+    
+    
+    }
+    
+    textload();
+    setInterval(textload, 12000)
+    function sendEmail() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+    var contact_no = document.getElementById("contact_no").value;
+
+
+    var mailtoLink = "mailto:shikhakumari7324@gmail.com" + "?subject=Contact Form Submission" + "&body=Name: " + name + "%0D%0AContact_No:"+ contact_no + "%0D%0AEmail: " + email + "%0D%0AMessage: " + message;
+
+    window.location.href = mailtoLink;
+}
+
+document.getElementById("downloadButton").addEventListener("click", function() {
+  // Define the file URL
+  var fileUrl = "shikha.docx";
+  
+  // Create a temporary anchor element
+  var downloadAnchor = document.createElement("a");
+  
+  // Set the href attribute to the file URL
+  downloadAnchor.href = fileUrl;
+  
+  // Set the download attribute to specify the filename
+  downloadAnchor.download = "Shikha_CV.docx";
+  
+  // Append the anchor element to the body
+  document.body.appendChild(downloadAnchor);
+  
+  // Trigger a click event on the anchor element
+  downloadAnchor.click();
+  
+  // Remove the anchor element from the DOM
+  document.body.removeChild(downloadAnchor);
+});
+
+function changeIcon() {
+    let icon = document.getElementById("icon");
+    let sidebar = document.getElementById("sidebar");
+    
+    let currentSrc = icon.getAttribute("class");
+    // menu.setAttribute("class","bx bx-x");
+
+if( currentSrc === "bx bx-menu" )
+{
+    icon.setAttribute("class","bx bx-x")
+    sidebar.style.display = "block";
+
+}
+if(currentSrc === "bx bx-x"){
+    icon.setAttribute("class","bx bx-menu");
+    sidebar.style.display = "none";
+
+}
+}
+
+</script>
+</body>
+</html>
+
+
+
